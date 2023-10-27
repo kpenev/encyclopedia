@@ -26,9 +26,8 @@ Of course, I am happy to answer any questions you have, and I very much hope to
 have you on board! Please let me know.
 
 Cheers,
--Dimitri Veras
- https://warwick.ac.uk/fac/sci/physics/research/astro/people/veras
-
+Dimitri Veras
+https://warwick.ac.uk/fac/sci/physics/research/astro/people/veras
 
 - The chapter should be around 10,000 words including tables and references;
   there should be no more than about 30 references. Please keep in mind that the
