@@ -4,7 +4,9 @@
 
 The term tides refers to changes in the shape of an astronomical object (in our
 case a planet or a star) in response to differences in the gravitational pull of
-a nearby mass at different locations within the object. 
+a nearby mass at different locations within the object. Below, tides and their
+effects are discussed qualitatively. For a full mathematical description of
+tides see \cite{Murray_Dermott_book}.
 
 Consider an exoplanet system consisting of a single planet orbiting a single
 star in a circular orbit. The gravitational acceleration due to the star at the
@@ -22,4 +24,42 @@ smaller than what is required to keep that part of the planet in orbit,
 resulting in a tidal force pointing away from the star. These tidal forces cause
 the planet to elongate along the star-planet line, and squeeze in the
 perpendicular direction. This elongation is frequently referred to as the tidal
-bulge. 
+bulge. The amplitude of the tidal bulge is set by competition between the tidal
+force and the self-gravity of the planet. Consequently, it is positively
+correlated with the planet radius and stellar mass, and negatively correlated
+with the planet mass and distance from the star. 
+
+Let us now consider the rotation of the planet. If the period of rotation is
+exactly equal to the orbital period (a.k.a. synchronous rotation), the
+sub-stellar point is fixed on the planet's surface, and consequently the tidal
+bulge is also fixed relative to the planet. However, if the rotation and orbital
+periods differ, the tidal bulge will travel on the planet's surface. If the
+rotational angular velocity of the planet is $\Omega_{pl}$, and the orbital
+angular velocity is $\Omega_{orb}$, a point on the surface of the planet will
+travel at a rate of $\Omega_{orb} - \Omega_{pl}$ relative to the sub-stellar
+point. Since there are two tidal bulges on the planet (one on the side facing
+the star and one on the opposite side), the planetary material will experience a
+tidal wave with a frequency of $2(\Omega_{orb} - \Omega_{pl})$.
+
+Any time dependent deformation of the planet will be subject to some amount of
+energy dissipation. The exact physical processes leading to this dissipation and
+the amount of energy dissipation they drive depend on the internal structure and
+properties of the planet. Regardless of the causes, this energy dissipation will
+introduce a delay between the tidal forcing and the response of the planet to
+that forcing. If the planet spins faster than synchronous (i.e. $\Omega_{pl} >
+\Omega_{orb}$), the tidal bulge will be ahead of the sub-stellar point, and if
+$\Omega_{pl} < \Omega_{orb}$, the tidal bulge will lag behind. The two tidal
+bulges, now shifter relative to the star-planet line, will experience the
+gravitational pull of the star. If the bulge is carried ahead of the sub-stellar
+point by rotation, the gravitational pull of the star will apply a torque to
+the planet opposite to its rotation, acting to slow down its spin, the reaction
+force on the star will act to add angular momentum to the orbit. Conversely,
+if the tidal bulge lags behind the sub-stellar point, the gravitational pull of
+the star will act to spin the planet up, taking angular momentum out of the
+orbit.
+
+Everything we have said so far about the tides the star raises on the planet
+applies equally to the tides the planet raises on the star. If the spin angular
+velocity of the star exceeds the orbital angular velocity, angular momentum is
+transferred from the stellar spin to the orbit, and if the stellar spin is
+slower than the orbit, angular momentum flows in the opposite direction.
