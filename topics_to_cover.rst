@@ -64,3 +64,5 @@ Tidas inspiral
   * Hoj Jupiter host galactic dynamics (Hamer ...)
 
   * Jackson et. al.
+
+  * https://ui.adsabs.harvard.edu/abs/2023arXiv231100305C/abstract
