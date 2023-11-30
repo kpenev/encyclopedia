@@ -15,19 +15,16 @@ keep the planet in orbit. The part of the planet facing the star is closer to
 the star and therefore experiences a slightly stronger gravitational pull.
 However, if we ignore the rotation of the planet for a moment, that part of the
 planet must follow a path with the same radius and period as the center of the
-planet (though with its center offset slightly). The result is that that the
-star provides larger gravitational acceleration to that part of the planet than
-the required centrifugal acceleration. This excess force as referred to as the
-tidal force, and it is directed towards the star for the star-facing part of the
+planet (though with its center offset slightly). The result is that the star
+provides larger gravitational acceleration to that part of the planet than the
+required centrifugal acceleration. This excess force as referred to as the tidal
+force, and it is directed towards the star for the star-facing part of the
 planet. Similarly, on the far side of the planet, the star's gravity is slightly
 smaller than what is required to keep that part of the planet in orbit,
 resulting in a tidal force pointing away from the star. These tidal forces cause
 the planet to elongate along the star-planet line, and squeeze in the
 perpendicular direction. This elongation is frequently referred to as the tidal
-bulge. The amplitude of the tidal bulge is set by competition between the tidal
-force and the self-gravity of the planet. Consequently, it is positively
-correlated with the planet radius and stellar mass, and negatively correlated
-with the planet mass and distance from the star.
+bulge.
 
 Let us now consider the rotation of the planet. If the period of rotation is
 exactly equal to the orbital period (a.k.a. synchronous rotation), the
@@ -80,6 +77,13 @@ on the star will act to add angular momentum to the orbit. Conversely, if the
 tidal bulge lags behind the sub-stellar point, the gravitational pull of the
 star will act to spin the planet up, taking angular momentum out of the orbit.
 
+The discussion above assumed that the equator of the planet is aligned with the
+orbital plane. This is not necessarily the case. If the planet's spin is tilted
+with respect to the orbit, regardless of whether the planet is rotating faster
+or slower than the orbit, rotation will shift the bulges away from the
+sub-stellar point. This in turn will result in a torque that will tend over time
+to bring the planet's equator and the orbital plane into alignment.
+
 So far we only considered circular orbits. For non-circular orbits, the orbital
 angular velocity is no longer constant. It is highest near periapsis (closest
 approach between the planet and star) and lowest near apoapsis (largest
@@ -108,10 +112,77 @@ the system and dissipated as heat, causing the orbit to circularize over time.
 
 Everything we have said so far about the tides the star raises on the planet
 applies equally to the tides the planet raises on the star. For circular orbits,
-if the spin angular velocity of the star exceeds the orbital angular velocity,
-angular momentum is transferred from the stellar spin to the orbit, and if the
-stellar spin is slower than the orbit, angular momentum flows in the opposite
-direction. Similarly, we can define a pseudo-synchronous period for the star at
-which the net tidal torque averaged over a complete orbit vanishes, but even if
-the star is spinning at such a rate, tidal energy dissipation continues and acts
-to circularize the orbit over time.
+aligned with the stellar equator, if the spin angular velocity of the star
+exceeds the orbital angular velocity, angular momentum is transferred from the
+stellar spin to the orbit, and if the stellar spin is slower than the orbit,
+angular momentum flows in the opposite direction. Similarly, we can define a
+pseudo-synchronous period for the star at which the net tidal torque averaged
+over a complete orbit vanishes. Even if the star is spinning
+pseudo-synchronously, tidal energy dissipation continues and acts to circularize
+the orbit over time. For misaligned orbits, tides will gradually work to align
+the orbital plane with the stellar equatior.
+
+The amplitude of the tidal bulge is set by competition between the tidal force
+and the self-gravity of the planet or the star experiencing the tides.
+Consequently, the planetary tides are positively correlated with the planet
+radius and stellar mass and negatively correlated with the planet mass.
+Conversely, the stellar tides are larger the larger the mass of the planet.
+Finally, both stellar and planetary tides get weaker with increasing
+star-planet separation, implying that tides will only be important if the planet
+gets close to its parent star for at least some part of its orbit. This can
+occur in one of two ways: either the planet has a very small orbital semimajor
+axis (short period orbit), or the eccentricity of the planet is very large
+making the pericenter distance small.
+
+\section{Tidal Timescales}
+
+Based on the discussion above, we can think of four separate tidal evolution
+timescales:
+
+\begin{enumerate}
+%
+    \item The timescale on which the planet's spin gets pseudo-synchronized and
+        aligned with the orbit
+%
+    \item The timescale on which the orbit circularizes
+%
+    \item The timescale on which the orbital period of a circular orbit changes
+%
+    \item The timescale on which the stellar spin changes
+%
+\end{enumerate}
+
+In order to compare some of these timescales, we need to consider the relative
+angular momenta of the planet's spin, the orbit, and the stellar spin.
+
+The planet's spin angular momuntum is negligible compared to both the orbital
+angular momentum and the spin angular momentum of the star.  Consequently, both
+the direction and period of the planet's spin can be changed by tides without
+significantly affecting the orbit, implying that the timescale on which the
+planet's spin gets pseudo-synchronized and aligned with the orbit is negligible
+compared to the timescales on which the orbit or the stellar spin evolve. Thus,
+we can assume that if a given exoplanet orbits close enough to its star for
+tides to be important, to a good approximation we can assume that the planet's
+spin is aligned with the orbit and pseudo-synchronized.
+
+To compare the two timescales on which the orbit changes, we begin by comparing
+the importance of the planetary to the stellar tides. The tidal deformation of
+an object is set by a competition between the tidal force due to the companion
+and the self-gravity of the object being tidally stretched. Since the planet has
+a smaller self-gravity and experiences much larger tidal force than the star,
+the planet is much more tidally deformed than the star. Consequently, as long as
+planetary tides are not static they will drive faster orbital evolution than the
+stellar tides. By the reasoning above, for both circular and eccentric orbits,
+we expect the planet to be aligned and spin pseudo-synchronously with the orbit.
+Hence, for eccentric orbits, the planetary tides still contribute to the
+evolution, while for circular orbits they do not. This in turn means that the
+tidal circularization timescale is shorter than the timescale on which circular
+orbits change their period, since the latter is only driven by the much weaker
+stellar tides.
+
+To compare these timescales to the timescale on which the stellar spin is
+affected by tides, note that stars have sufficiently large moment of inertia
+for their spin angular momentum to be comparable to or larger than the orbital
+angular momentum. Since only the stellar tides can affect the stellar spin, this
+implies that the timescale on which the stellar spin changes is comparable to or
+longer than the timescale on which the orbital period changes.
