@@ -78,7 +78,7 @@ the stellar spin and orbital configuration. Sun-like stars in particular have
 spin periods longer than a few days for most of their main-sequence lifetime.
 Since tidal circularization is only important for orbital periods of a few days
 or less, stellar tides will mostly decrease the angular momentum of the orbit
-over time, resulting in smaller perincenter distance compared to planetary
+over time, resulting in smaller pericenter distance compared to planetary
 tides.
 
 \section{Tidal inspiral}
@@ -114,6 +114,20 @@ planets, it lies inside the star, in which case the planet will be engulfed by
 the star still relatively intact. In either case, the tidal inspiral will cause
 the destruction of the planet.
 
+Currently, a number of researchers have claimed to directly detect shortening of
+the orbital periods of exoplanets over time by observing a shortening of the
+time between consecutive transits. For example, the very firs planet discovered
+by the \kepler space satellite Kepler-1658 (a.k.a KOI-4) appears to be shrinking
+\citep{Vissapragada_et_al_22}. \citet{Maciejewski_et_al_16} also claim to detect
+orbital decay in the system WASP-12. This finding was independently confirmed by
+\citet{Patra_et_al_17}. At the moment it is hard to rule out alternative
+explanations for the observed it is hard to be completely certain that what is
+observed is indeed orbital decay as opposed to for example orbital precession or
+the effect of undetected third bodies in these exoplanet systems. Furthermore,
+even if the orbits of these planets are indeed decaying, unequivocally
+attributing that decay with tidal dissipation in the star is far from
+straightforward.
+
 Two separate lines of evidence point to this process occurring for gas giant
 exoplanets, while perhaps not for smaller, rocky planets. First,
 \citet{Jackson_et_al_09} pointed out that the smallest orbits in which younger
@@ -142,7 +156,7 @@ faster the star spins, which causes the spin periods of these stars to converge
 over time. As a result, isolated Sun-like stars older than a few hundred million
 years have a spin period tightly related to their age. For stars experiencing
 tides however, this unique spin-age relationship can be broken. For exoplanets
-experiencing tidal inspiral the the host star is expected to spin faster than an
+experiencing tidal inspiral the host star is expected to spin faster than an
 isolated star of the same age would. This is direct consequence of angular
 momentum conservation. As tides drive the planet closer to its parent star, the
 orbital angular momentum that is lost gets added to the stellar spin. One expect
@@ -155,7 +169,11 @@ stars and using the spin-age relationship is one of very few ways of determining
 stellar ages. The fact that tides affect the spin, means this method can not be
 reliably used for hot Jupiter hosts. On the other hand, \citet{Penev_et_al_18}
 suggest that the deviation from single star spin evolution is significant enough
-to be used as a probe of the tidal dissipation physics of Sun-like stars.
+to be used as a probe of the tidal dissipation physics of Sun-like stars. The
+latter is particularly important as exoplanet systems are sensitive to a
+different regime of tides than binary stars. Only stellar tides affect the
+stellar spin, unlike the effects on the orbit, for which as long as eccentricity
+is non-zero, both stellar and the planetary tides are important.
 
 \section{Tidal alignment}
 
@@ -197,3 +215,32 @@ theories than the somewhat simplistic treatment discussed in the introduction
 (see \citep{Lai_12} and \citep{Anderson_et_al_21}).
 
 \section{Tidally heating and inflating exoplanets}
+
+Tidal friction converts some of the mechanical energy of tidal deformations into
+heat. This heating is irrelevant for the star, since it only constitutes a
+negligible fraction of the stellar luminosity. However, for the planet this may
+not be the case.
+
+ * Can be important inflation mechanism for hot Jupiters, many of which are
+ observed to have anomalously large radii (c.f.
+ https://ui.adsabs.harvard.edu/abs/2017ApJ...844...94K/abstract).
+
+ * Even though it may be small compared to stellar irradiation, it can have an
+ outsized impact since it occurs deep within the planet. In contrast, stellar
+ irradiation deposits massive amounts of energy, but only at optical depths of
+ order unity, where it is quickly radiated away without significantly affecting
+ the internal structure of the planet. In contrast,
+ https://ui.adsabs.harvard.edu/abs/2017ApJ...844...94K/abstract show that even
+ orders of magnitude smaller heating at much larger optical depths can have a
+ profound effect on the planetary radius.
+
+ * There is a potential for a feedback loop. As tides heat the planet it gets
+ larger, which in turn increases the tidal heating rate, making the planet even
+ larger etc.
+
+ * Only works if eccentricty is non-zero. Perhaps driven by unseen companions or
+ non-synchronous rotation in the planet, perhaps driven by thermal tides (c.f.
+ https://ui.adsabs.harvard.edu/abs/2010ApJ...714....1A/abstract).
+
+ * Can be crucially important for high-eccentricity migration model of forming
+ hot Jupiters (perhaps this is out of scope of this chapter).
