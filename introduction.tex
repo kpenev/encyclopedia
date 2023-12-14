@@ -124,7 +124,7 @@ pseudo-synchronous period for the star at which the net tidal torque averaged
 over a complete orbit vanishes. Even if the star is spinning
 pseudo-synchronously, tidal energy dissipation continues and acts to circularize
 the orbit over time. For misaligned orbits, tides will gradually work to align
-the orbital plane with the stellar equatior.
+the orbital plane with the stellar equator.
 
 The amplitude of the tidal bulge is set by competition between the tidal force
 and the self-gravity of the planet or the star experiencing the tides.
@@ -138,7 +138,7 @@ occur in one of two ways: either the planet has a very small orbital semimajor
 axis (short period orbit), or the eccentricity of the planet is very large
 making the pericenter distance small.
 
-\section{Tidal Timescales}
+\section{Tidal timescales}
 
 Based on the discussion above, we can think of four separate tidal evolution
 timescales:
@@ -159,7 +159,7 @@ timescales:
 In order to compare some of these timescales, we need to consider the relative
 angular momenta of the planet's spin, the orbit, and the stellar spin.
 
-The planet's spin angular momuntum is negligible compared to both the orbital
+The planet's spin angular momentum is negligible compared to both the orbital
 angular momentum and the spin angular momentum of the star.  Consequently, both
 the direction and period of the planet's spin can be changed by tides without
 significantly affecting the orbit, implying that the timescale on which the
@@ -190,3 +190,88 @@ for their spin angular momentum to be comparable to or larger than the orbital
 angular momentum. Since only the stellar tides can affect the stellar spin, this
 implies that the timescale on which the stellar spin changes is comparable to or
 longer than the timescale on which the orbital period changes.
+
+\section{Equilibrium state}
+
+Let us significantly simplify the problem of tidal evolution. First, let us
+stick to a system with just a planet and a star. Second, let us assume that
+tides are allowed unlimited time to act. Third, let us ignore all other
+processes that can change the system. Under these conditions, one of two
+possible final states will eventually be reached. Either the two objects will
+merge, or the system will end up in a circular orbit, the planet and stellar
+spin axes will be aligned with the orbital angular momentum, and the planet and
+star spin periods will be equal to the orbital period.
+
+Which of these two possibilities the system approaches depends on the initial
+angular momentum available to the system. Since tides are purely internal
+interactions within the system, they can only redistribute angular momentum, but
+the total angular momentum vector must remain fixed. Let $M_\star$ and $M_p$ be
+the masses of the star and planet, and $I_\star$ and $I_p$ their moments of
+inertia.
+
+%$\Omega_\star$ and $\Omega_p$ their angular velocities, and let $a_0$
+%and $e_0$ be the initial orbital semimajor axis and eccentricity. For
+%the sake of simplifying the algebra, let us further assume that the initial
+%spin angular momenta are both parallel to the orbital angular momentum. Under
+%these assumptions, the initial angular momentum is given by:
+%
+%\begin{equation}
+%%
+%    L_0
+%%
+%    =
+%%
+%    I_\star \Omega_star
+%%
+%    +
+%%
+%    I_p \Omega_p
+%%
+%    +
+%%
+%    M_\star M_p \sqrt{\frac{G a_0 (1 - e_0^2)}{M_\star + M_p}}
+%%
+%\end{equation}
+%
+%
+
+If the two objects are to avoid merging, and reach a final synchronized spin in
+a circular orbit with semimajor axis $a_f$, the final spin angular velocities of
+both the star and the planet must be equal to the orbital angular velocity,
+which by Kepler's third law is:
+
+\begin{equation}
+%
+    \Omega_{orb} = \sqrt{\frac{G (M_\star + M_p)}{a_f^3}}
+%
+\end{equation}
+
+This gives the final angular momentum of the system as:
+
+\begin{equation}
+%
+    L
+%
+    =
+%
+    \left(I_\star + I_p) \sqrt{\frac{G (M_\star + M_p)}{a_f^3}}
+%
+    +
+%
+    M_\star M_p \sqrt{\frac{G a_f}{M_\star + M_p}}
+%
+    \label{eq:equilibrium_angmom}
+%
+\end{equation}
+
+The last term above is the orbital angular momentum.
+
+From the above equation we see that $L \rightarrow \infty$ as $a_f \rightarrow
+0$, and $a_f \rightarrow \infty$, and $L$ has a minimum at a finite value of
+$a_f$. Figure \ref{fig:equilibrum_angmom} shows a graph of Eq.
+\ref{eq:equilibrium_angmom} for a Jupiter mass planet around a Solar mass star.
+
+If the initial angular momentum is smaller than this minimum, no equilibrium
+state exists with the two objects surviving, hence the ultimate fate of a system
+starting below this critical angular momentum is for the planet to be engulfed
+by the star.
