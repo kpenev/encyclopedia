@@ -2,11 +2,11 @@
 %
 \label{sec:introduction}
 
-The term tides refers to changes in the shape of an astronomical object (in our
-case a planet or a star) in response to differences in the gravitational pull of
-a nearby mass at different locations within the object. In this chapter, tides
-and their effects are discussed mostly qualitatively. For a full mathematical
-description of tides see \cite{Murray_Dermott_book}.
+The term tides refers to changes in the shape of an astronomical object in
+response to differences in the gravitational pull by a nearby mass at different
+locations within the object. In this chapter, tides and their effects are
+discussed mostly qualitatively. For a full mathematical description of tides see
+\cite{Murray_Dermott_book}.
 
 Consider an exoplanet system consisting of a single planet orbiting a single
 star in a circular orbit. The gravitational acceleration due to the star at the
@@ -17,26 +17,30 @@ However, if we ignore the rotation of the planet for a moment, that part of the
 planet must follow a path with the same radius and period as the center of the
 planet (though with its center offset slightly). The result is that the star
 provides larger gravitational acceleration to that part of the planet than the
-required centrifugal acceleration. This excess force as referred to as the tidal
+required centrifugal acceleration. This excess force is referred to as the tidal
 force, and it is directed towards the star for the star-facing part of the
 planet. Similarly, on the far side of the planet, the star's gravity is slightly
 smaller than what is required to keep that part of the planet in orbit,
-resulting in a tidal force pointing away from the star. These tidal forces cause
-the planet to elongate along the star-planet line, and squeeze in the
-perpendicular direction. This elongation is frequently referred to as the tidal
-bulge.
+resulting in a tidal force pointing away from the star. Relative to the planet
+center, both of these forces point outward, causing the planet to elongate along
+the star-planet line, and squeeze in the perpendicular direction. This
+elongation is frequently referred to as the tidal bulge.
 
-Let us now consider the rotation of the planet. If the period of rotation is
-exactly equal to the orbital period (a.k.a. synchronous rotation), the
-sub-stellar point is fixed on the planet's surface, and consequently the tidal
-bulge is also fixed relative to the planet. However, if the rotation and orbital
-periods differ, the tidal bulge will travel on the planet's surface. If the
-rotational angular velocity of the planet is $\Omega_{pl}$, and the orbital
-angular velocity is $\Omega_{orb}$, ithe sub-stellar point travel will travel on
-the surface with an angular frequency $\Omega_{orb} - \Omega_{pl}$. Since there
-are two tidal bulges on the planet (one on the side facing the star and one on
-the opposite side), the planetary material will experience a tidal wave with a
-frequency of $2(\Omega_{orb} - \Omega_{pl})$.
+Let us now consider the rotation of the planet. Similarly to tides, rotation
+slightly decreases the outward force near the equator of the planet required to
+counteract gravity, since part of the gravitational force is required to provide
+centripetal acceleration. This causes a slight equatorial bulge. In addition,
+rotation interacts with tides. If the period of rotation is exactly equal to the
+orbital period (a.k.a. synchronous rotation), the sub-stellar point is fixed on
+the planet's surface, and consequently the tidal bulge is also fixed relative to
+the planet. However, if the rotation and orbital periods differ, the tidal bulge
+will travel on the planet's surface. If the rotational angular velocity of the
+planet is $\Omega_{pl}$, and the orbital angular velocity is $\Omega_{orb}$,
+the sub-stellar point travel will travel on the surface with an angular
+frequency $\Omega_{orb} - \Omega_{pl}$. Since there are two tidal bulges on the
+planet (one on the side facing the star and one on the opposite side), the
+planetary material will experience a tidal wave with a frequency of
+$2(\Omega_{orb} - \Omega_{pl})$.
 
 Any time dependent deformation of the planet will result in some conversion of
 mechanical energy to heat. The simplest picture of this is friction between
@@ -44,13 +48,13 @@ parts of the planet that move relative to each other. For a continuous medium,
 this friction is encapsulated in the concept of viscosity. However, a great
 variety of physical processes can result in energy dissipation of tidal
 perturbations. The physical causes and the amount of energy that is dissipated
-depends on the internal structure and properties of the planet.
-
-Regardless of the causes, this energy dissipation introduces a delay between the
-tidal forcing and the response of the planet to that forcing. If the planet
-spins faster than synchronous (i.e.  $\Omega_{pl} > \Omega_{orb}$), the tidal
-bulge will be ahead of the sub-stellar point, and if $\Omega_{pl} <
-\Omega_{orb}$, the tidal bulge will lag behind (Fig.~\ref{fig:tidal_bulge}).
+depends on the internal structure and properties of the planet.  Regardless of
+the causes, this energy dissipation introduces a delay between the tidal forcing
+and the response of the planet to that forcing. If the planet spins faster than
+synchronous (i.e.  $\Omega_{pl} > \Omega_{orb}$), the tidal bulge will be
+carried ahead of the sub-stellar point by the planet's rotation, and if
+$\Omega_{pl} < \Omega_{orb}$, the tidal bulge will lag behind
+(Fig.~\ref{fig:tidal_bulge}).
 
 \begin{figure}[t]
 %
@@ -91,30 +95,32 @@ to bring the planet's equator and the orbital plane into alignment.
 So far we only considered circular orbits. For non-circular orbits, the orbital
 angular velocity is no longer constant. It is highest near periapsis (closest
 approach between the planet and star) and lowest near apoapsis (largest
-planet-star distance). In this case, tides will push the spin of the planet to a
-state where the average torque over an orbit vanishes. This is known as
-pseudo-synchronous rotation. Near periapsis the orbital angular velocity is
-smaller than the pseudo-synchronous spin of the planet, thus the tidal bulge
-leads the sub-stellar point, causing angular momentum to flow from the planet to
-the orbit. Then for the part of the orbit around periapsis, the orbital angular
-velocity exceed the pseudo-synchronous spin of the planet, causing angular
-momentum to flow in the opposite direction. Since tides are stronger near
-periapsis, the pseudo-synchronous period is somewhat shorter than the orbital
-period, resulting in the planet being spun-down over a larger fraction of the
-orbit, but at a slower rate.
+planet-star distance). In this case, there exists a spin angular velocity of the
+planet, for which the average tidal torque over an orbit vanishes. This is known
+as pseudo-synchronous rotation. Near periapsis the orbital angular velocity
+exceeds the pseudo-synchronous spin of the planet, thus the tidal bulge leads
+the sub-stellar point, causing angular momentum to flow from the orbit to the
+planet. Then for the part of the orbit around apoapsis, the orbital angular
+velocity is smaller than the pseudo-synchronous spin of the planet, causing
+angular momentum to flow in the opposite direction. Since tides are stronger
+near periapsis, the pseudo-synchronous period must be somewhat shorter than the
+orbital period, resulting in the planet being spun-down over a larger fraction
+of the orbit than it is being spun up, but at a slower rate. If the spin of the
+planet is faster(slower) than the pseudo-synchronous rate tides will act to spin
+the planet down(up).
 
 For eccentric orbits, even if the planet is pseudo-synchronized, tidal evolution
 does not stop. Even though the average torque is zero, energy is still being
-dissipation because the planet-star distance varies over time and the
-sub-stellar point is not fixed on the surface. From the discussion about
-pseudo-synchronous period above, it is evident that near periapsis, the
-sub-stellar point will drift eastward, and near apoapsis it will drift westward,
-with a long-term westward average, since the pseudo-synchronous spin period is
-shorter than the orbital period. These shifting both in location and amplitude
-tidal bulges will still experience friction. Thus while no angular momentum will
-be exchanged between the planet and the orbit, energy will still be extracted
-from the system and dissipated as heat, causing the orbit to circularize over
-time.
+dissipated because the sub-stellar point is not fixed on the surface and the
+planet-star distance varies over time. From the discussion about
+pseudo-synchronous period above, it follows that near periapsis, the sub-stellar
+point will drift eastward (i.e. in the direction of rotation), and near apoapsis
+it will drift westward, with a long-term westward average, since the
+pseudo-synchronous spin period is shorter than the orbital period. These
+shifting both in location and amplitude tidal bulges will still experience
+energy dissipation. Thus while no angular momentum will be exchanged between the
+planet and the orbit, energy will still be extracted from the system and
+dissipated as heat, causing the orbit to circularize over time.
 
 Everything we have said so far about the tides the star raises on the planet
 applies equally to the tides the planet raises on the star. For circular orbits,
