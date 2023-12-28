@@ -2,7 +2,9 @@
 
 """Create a plot of the equilibrium angular momentum."""
 
-from matplotlib import pyplot, rcParams
+from os import path
+
+from matplotlib import pyplot, rcParams, patheffects
 from astropy import units as u, constants as c
 import numpy
 
@@ -30,19 +32,37 @@ if __name__ == '__main__':
     rcParams['font.size'] = '18'
     rcParams['figure.subplot.top'] = 0.95
     rcParams['figure.subplot.bottom'] = 0.15
+    rcParams['figure.subplot.left'] = 0.15
     rcParams['figure.subplot.right'] = 0.95
     pyplot.semilogx(
         plot_a.to_value(a_units),
         plot_final_angmom.to_value(angmom_units),
         '-k'
     )
+    ymin = plot_final_angmom.to_value(angmom_units).min()
     pyplot.axhspan(
         ymin=0,
-        ymax=plot_final_angmom.to_value(angmom_units).min(),
+        ymax=ymin,
         color='0.5'
     )
-    pyplot.xlabel(r'Semimajor axis [$R_\odot$]')
-    pyplot.ylabel(r'Final $L$ [$M_\odot R_\odot^2 / day$]')
+    pyplot.xlabel(r'Equilibrium semi-major axis [$R_\odot$]')
+    pyplot.ylabel(r'Angular momentum [$M_\odot R_\odot^2 / day$]')
+    text = pyplot.text(numpy.sqrt(1000.0),
+                       ymin / 2, 'Planet engulfed',
+                       ha='center',
+                       va='center',
+                       color='white')
+    text.set_path_effects([patheffects.Stroke(linewidth=3, foreground='black'),
+                           patheffects.Normal()])
     pyplot.ylim(0, 1)
+    pyplot.xlim(1, 1000)
 
-    pyplot.show()
+    plot_fname = path.join(
+        path.dirname(
+            path.dirname(
+                path.abspath(__file__)
+            )
+        ),
+        'equilibrium_angmom.pdf'
+    )
+    pyplot.savefig(plot_fname)
