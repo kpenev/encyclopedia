@@ -48,9 +48,10 @@ parts of the planet that move relative to each other. For a continuous medium,
 this friction is encapsulated in the concept of viscosity. However, a great
 variety of physical processes can result in energy dissipation of tidal
 perturbations. The physical causes and the amount of energy that is dissipated
-depends on the internal structure and properties of the planet.  Regardless of
-the causes, this energy dissipation introduces a delay between the tidal forcing
-and the response of the planet to that forcing. If the planet spins faster than
+can in principle depend on the internal structure and spin of the planet, as
+well as on the frequency and amplitude of the tidal forcing. Regardless of the
+causes, this energy dissipation introduces a delay between the tidal forcing and
+the response of the planet to that forcing. If the planet spins faster than
 synchronous (i.e.  $\Omega_{pl} > \Omega_{orb}$), the tidal bulge will be
 carried ahead of the sub-stellar point by the planet's rotation, and if
 $\Omega_{pl} < \Omega_{orb}$, the tidal bulge will lag behind
@@ -102,12 +103,44 @@ exceeds the pseudo-synchronous spin of the planet, thus the tidal bulge leads
 the sub-stellar point, causing angular momentum to flow from the orbit to the
 planet. Then for the part of the orbit around apoapsis, the orbital angular
 velocity is smaller than the pseudo-synchronous spin of the planet, causing
-angular momentum to flow in the opposite direction. Since tides are stronger
-near periapsis, the pseudo-synchronous period must be somewhat shorter than the
-orbital period, resulting in the planet being spun-down over a larger fraction
-of the orbit than it is being spun up, but at a slower rate. If the spin of the
-planet is faster(slower) than the pseudo-synchronous rate tides will act to spin
-the planet down(up).
+angular momentum to flow in the opposite direction.
+
+\begin{figure}[t]
+%
+    \centering
+%
+    \includegraphics[width=0.5\textwidth]{pseudosync_spin.pdf}
+%
+    \caption{
+%
+        The ratio of the pseudo-synchronous spin angular velocity of a planet to
+        the average orbital angular velocity and the orbital angular velocity at
+        pericenter as a function of the orbital eccentricity assuming the time
+        lag of the tidal bulge relative to the tidal forcing is independent of
+        the forcing frequency.
+%
+    }
+%
+    \label{fig:pseudo-synchronous}
+%
+\end{figure}
+
+
+The exact value of the pseudo-synchronous spin depends on the properties of the
+tidal dissipation mechanism. \citep{Hut_81} derived an expression for it under
+the assumption that all tidal waves experience the same time lag regardless of
+the frequency of the tidal forcing giving rise to them. Under that assumption,
+since tides are stronger near periapsis, the pseudo-synchronous period must be
+somewhat shorter than the orbital period, resulting in the planet being
+spun-down over a larger fraction of the orbit than it is being spun up, but at a
+slower rate. Thus, the \citet{Hut_81} pseudo-synchronous rotational angular
+velocity ($\Omega_{ps}$) of the planet lies between the orbit-average angular
+velocity ($\Omega_{orb}$) and the angular velocity at periapsis ($\Omega_{peri}
+= \sqrt{(1+e)/(1-e)^3}\Omega_{orb}$). Figure \ref{fig:pseudo-synchronous} shows
+the eccentricity dependence of $\Omega_{ps}$ under these assumptions in units of
+the orbital angular frequency and the angular frequency at periapsis. If the
+spin of the planet is faster(slower) than the pseudo-synchronous rate tides will
+act to spin the planet down(up).
 
 For eccentric orbits, even if the planet is pseudo-synchronized, tidal evolution
 does not stop. Even though the average torque is zero, energy is still being
