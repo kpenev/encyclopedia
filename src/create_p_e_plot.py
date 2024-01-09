@@ -11,6 +11,8 @@ if __name__ == '__main__':
     rcParams['figure.subplot.top'] = 0.95
     rcParams['figure.subplot.bottom'] = 0.15
     rcParams['figure.subplot.right'] = 0.95
+    rcParams['figure.subplot.left'] = 0.125
+
 
     data = NasaExoplanetArchive.query_criteria(
         table='PSCompPars',

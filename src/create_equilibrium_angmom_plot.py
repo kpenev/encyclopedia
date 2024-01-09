@@ -39,10 +39,17 @@ if __name__ == '__main__':
         plot_final_angmom.to_value(angmom_units),
         '-k'
     )
-    ymin = plot_final_angmom.to_value(angmom_units).min()
+    min_index = plot_final_angmom.to_value(angmom_units).argmin()
+    ymin = plot_final_angmom.to_value(angmom_units)[min_index]
+    xmin = plot_a.to_value(a_units)[min_index]
     pyplot.axhspan(
         ymin=0,
         ymax=ymin,
+        color='0.5'
+    )
+    pyplot.fill_betweenx(
+        plot_final_angmom.to_value(angmom_units)[:min_index],
+        plot_a.to_value(a_units)[:min_index],
         color='0.5'
     )
     pyplot.xlabel(r'Equilibrium semi-major axis [$R_\odot$]')

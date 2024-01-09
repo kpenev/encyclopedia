@@ -27,6 +27,8 @@ angular velocity, which by Kepler's third law is:
 %
     \Omega_{orb} = \sqrt{\frac{G (M_\star + M_p)}{a_f^3}}
 %
+    \label{eq:orbital_angular_velocity}
+%
 \end{equation}
 
 This gives the final angular momentum of the system as:
@@ -86,17 +88,28 @@ and in turn the spin periods of the planet and the star.
 
 Evidently, if the angular momentum exceeds the critical value, there are two
 possible equilibrium states (there are two values of $a_f$ that satisfy Eq.
-\eqref{eq:equilibrium_angmom}). Which one the system ends up in depends on the
-starting orbit and spins of the planet and star. If the initial semimajor axis
-is larger than the larger of the two possible equilibrium semimajor axes, the
-system will end up in the larger $a_f$, slower spinning equilibrium state.
-Similarly, if the initial semimajor axis is smaller the smaller of the two
-possible equilibrium semimajor axes, the system will end up in the smaller
-$a_f$, faster spinning state. The dynamics of tidal evolution when the system
-starts between the two solutions of Eq. \eqref{eq:equilibrium_angmom} depends on
-both the initial semimajor axis and eccentricity as well as the properties of
-the tidal dissipation mechanism. Discussion of the details of that case is
-beyond the scope of this introductory chapter.
+\eqref{eq:equilibrium_angmom}). From Equations
+\eqref{eq:orbital_angular_velocity} and \eqref{eq:equilibrium_angmom} above one
+can show that the solution with the smaller semimajor axis is an unstable
+equilibrium, while the solution with the larger semimajor axis is a stable.
+Physically, if an infinitesimal amount of angular momentum is transferred from
+the orbit to the spin of the star (we can ignore the spin angular momentum of
+the planet), both the spin and orbital angular velocities will increase.
+However, if a system starts with a semimajor axis equal to the smaller of the
+two solutions, the orbital angular velocity will increase more than the spin,
+which in turn will ensure tides will transfer even more angular momentum from
+the orbit to the spin. If instead the system begins with the larger semi-major
+axis solution, the orbital angular velocity will increase less than the spin
+angular velocity and tides will work to undo the angular momentum transfer.
+Similar logic applies if one assumes an initial perturbation transferring
+angular momentum from the spin to the orbit. In that case both the orbital and
+spin angular velocities will decrease, but for the smaller semimajor axis
+solution the orbital angular velocity will decrease faster, causing even more
+angular momentum transfer from the spin to the orbit. As a result, if the
+initial semi-major axis is larger than the smaller of the two solutions, tides
+will drive the system toward the larger $a_f$, slower spinning, solution. If the
+systems starts interior to the smaller of the two solutions, tides will cause
+orbital decay until the planet is destroyed.
 
 In practice, the simplifying assumptions we made above are often violated. Many
 exoplanet systems have multiple planets, or even multiple stars. These extra
@@ -187,10 +200,11 @@ calculate the tidal torque and power each wave applies to the orbit separately
 and calculate the evolution by simply adding these up.
 
 Just like for the single tidal term of aligned circular orbits, the tidal torque
-from echo of these tidal terms flips its sign as the frequency of that term
+from each of these tidal terms changes its sign as the frequency of that term
 crosses zero. If the amplitude of the tidal term for a given $m,m'$ is large
-enough, this change in the sign of the tidal torque introduces the possibility
-that the spin of the object can be locked in a frequency close to
+enough and the increase in dissipation as the frequency moves away from zero is
+sufficiently steep, this change in the sign of the tidal torque introduces the
+possibility that the spin of the object can be locked in a frequency close to
 $\Omega_{spin}=\frac{m'}{m} \Omega_{orb}$. This can happen if the tidal torque
 of that particular tidal term is large enough to cancel the combined torques of
 all other terms. As the relative amplitudes of the different tidal terms depend
@@ -202,10 +216,10 @@ fewer terms will have sufficient amplitudes to hold the spin in a locked state.
 In principle, both the planet and the star spin for eccentric systems can be
 locked in one of these states. In our own Solar system, Mercury is in such a
 spin-orbit locked state, with $m'=3$ and $m=2$, i.e. executing three revolutions
-for every two orbital periods. It is likely that many exoplanets in short
-orbital periods are also locked in similar states, as long as their orbits have
-sufficient eccentricity to support the lock. Unfortunately, so far we have not
-found a way to measure the spin of exoplanets, so we do not have a way of
+for every two orbital periods. It is likely that at least some exoplanets in
+short orbital periods are also locked in similar states, as long as their orbits
+have sufficient eccentricity to support the lock. Unfortunately, so far we have
+not found a way to measure the spin of exoplanets, so we do not have a way of
 observing this effect directly.
 
 It is important to note that, even though the overall tidal torque is close to

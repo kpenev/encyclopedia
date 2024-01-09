@@ -17,13 +17,14 @@ However, if we ignore the rotation of the planet for a moment, that part of the
 planet must follow a path with the same radius and period as the center of the
 planet (though with its center offset slightly). The result is that the star
 provides larger gravitational acceleration to that part of the planet than the
-required centrifugal acceleration. This excess force is referred to as the tidal
+required centripetal acceleration. This excess force is referred to as the tidal
 force, and it is directed towards the star for the star-facing part of the
 planet. Similarly, on the far side of the planet, the star's gravity is slightly
 smaller than what is required to keep that part of the planet in orbit,
 resulting in a tidal force pointing away from the star. Relative to the planet
-center, both of these forces point outward, causing the planet to elongate along
-the star-planet line, and squeeze in the perpendicular direction. This
+center, both of these forces point outward. Forces internal to the planet (e.g.
+self gravity) must balance those extra pulls, causing the planet to elongate
+along the star-planet line, and squeeze in the perpendicular direction. This
 elongation is frequently referred to as the tidal bulge.
 
 Let us now consider the rotation of the planet. Similarly to tides, rotation
@@ -96,12 +97,15 @@ to bring the planet's equator and the orbital plane into alignment.
 So far we only considered circular orbits. For non-circular orbits, the orbital
 angular velocity is no longer constant. It is highest near periapsis (closest
 approach between the planet and star) and lowest near apoapsis (largest
-planet-star distance). In this case, there exists a spin angular velocity of the
-planet, for which the average tidal torque over an orbit vanishes. This is known
-as pseudo-synchronous rotation. Near periapsis the orbital angular velocity
-exceeds the pseudo-synchronous spin of the planet, thus the tidal bulge leads
-the sub-stellar point, causing angular momentum to flow from the orbit to the
-planet. Then for the part of the orbit around apoapsis, the orbital angular
+planet-star distance). Because the orbital angular velocity is changing, there
+is no rotation period for which the tidal bulge can be static on the surface of
+the planet, so no matter the spin of the planet there will always be some
+non-zero tidal dissipation. In this case, there exists a spin angular velocity
+of the planet, for which the average tidal torque over an orbit vanishes. This
+is known as pseudo-synchronous rotation. Near periapsis the orbital angular
+velocity exceeds the pseudo-synchronous spin of the planet, thus the tidal bulge
+leads the sub-stellar point, causing angular momentum to flow from the orbit to
+the planet. Then for the part of the orbit around apoapsis, the orbital angular
 velocity is smaller than the pseudo-synchronous spin of the planet, causing
 angular momentum to flow in the opposite direction.
 
@@ -124,7 +128,6 @@ angular momentum to flow in the opposite direction.
     \label{fig:pseudo-synchronous}
 %
 \end{figure}
-
 
 The exact value of the pseudo-synchronous spin depends on the properties of the
 tidal dissipation mechanism. \citep{Hut_81} derived an expression for it under
@@ -151,9 +154,9 @@ point will drift eastward (i.e. in the direction of rotation), and near apoapsis
 it will drift westward, with a long-term westward average, since the
 pseudo-synchronous spin period is shorter than the orbital period. These
 shifting both in location and amplitude tidal bulges will still experience
-energy dissipation. Thus while no angular momentum will be exchanged between the
-planet and the orbit, energy will still be extracted from the system and
-dissipated as heat, causing the orbit to circularize over time.
+energy dissipation. Thus while on average no angular momentum will be exchanged
+between the planet and the orbit, energy will still be extracted from the system
+and dissipated as heat, causing the orbit to circularize over time.
 
 Everything we have said so far about the tides the star raises on the planet
 applies equally to the tides the planet raises on the star. For circular orbits,
@@ -180,6 +183,8 @@ semimajor axis (short period orbit), or the eccentricity of the planet is very
 large making the pericenter distance small.
 
 \section{Tidal timescales}
+%
+\label{sec:timescales}
 
 Based on the discussion above, we can think of four separate tidal evolution
 timescales (ordered from shortest to longest):
@@ -243,3 +248,54 @@ for their spin angular momentum to be comparable to or larger than the orbital
 angular momentum. Since only the stellar tides can affect the stellar spin, this
 implies that the timescale on which the stellar spin changes is comparable to or
 longer than the timescale on which the orbital period changes.
+
+Figure \ref{fig:example_evolution} shows a theoretically calculated tidal
+evolution of a Jupiter-mass planet around a Solar mass star assuming the
+simplest possible prescription of tidal friction. Namely, tidal friction is
+assumed to produce the same time lag for all tidal waves regardless of their
+frequency or spin of the object. The lag was assumed the same for the planet and
+the star. Only the main-sequence part of the evolution is shown to highlight the
+effect of tides, excluding  earlier ages when the stellar spin evolution is
+dominated by the changes in the moment of inertia of the star as it contracts.
+The initial configuration of the system at the start of the simulation was
+chosen such that all the effects described above occur within the main sequence
+lifetime of the star. If the initial orbital period is increased or decreased
+all timescales get longer or shorter respectively with a very steep dependence.
+
+Since the time lag and initial conditions for this calculation were somewhat
+arbitrarily chosen (though not unreasonable), the actual timescales should not
+be taken seriously. Rather it is their hierarchy the figure is meant to
+illustrate. One sees from the right panel that the first thing that happens is
+that the planet's spin very quickly approaches the pseudo-synchronous spin rate
+(on a timescale of tens of thousands of years in this particular case).
+Subsequently, on a roughly 4 orders of magnitude longer timescale, the orbit is
+circularized. Finally, on a timescale another one or two orders of magnitude
+longer, stellar tides cause the orbit to decay and also reverse the trend of the
+stellar spin evolution from spinning down due to magnetic braking (like Sun-like
+stars are known to do) to spinning up due to the tidal friction. With the
+parameters chosen for this calculation, the planet gets too close to the star
+and is destroyed shortly before the end of the simulation.
+
+\begin{figure}[t]
+%
+    \centering
+%
+    \includegraphics[width=0.49\textwidth]{example_evolution_periods.pdf}
+%
+    \includegraphics[width=0.49\textwidth]{example_evolution_eccentricity.pdf}
+%
+    \caption{
+%
+        Example main-sequence tidal evolution of a Jupiter-mass planet around a
+        Solar mass star. The left panel shows the evolution of the orbital
+        period (green line) and the spin periods of the planet (orange line) and
+        the star (blue line). The dotted red line also shows the
+        pseudo-synchronous rotation period for the planet following
+        \citet{Hut_81} (i.e. the spin at which the orbit averaged tidal torque
+        vanishes). The right panel shows the evolution of the eccentricity.
+%
+    }
+%
+    \label{fig:example_evolution}
+%
+\end{figure}
